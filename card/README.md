@@ -42,7 +42,6 @@ root                    (the root folder)
 
 ## Authors
 ----
-*Le Moi
 
     ▨-▨¬ლ(•_•) 
 
