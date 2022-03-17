@@ -1,5 +1,6 @@
 from game.casting.actor import Actor
 
+speed = 10
 
 class Artifact(Actor):
     """
@@ -36,3 +37,6 @@ class Artifact(Actor):
 
     def get_identity(self):
         return self._identity
+
+    def drop(self):
+        self._position._y += speed

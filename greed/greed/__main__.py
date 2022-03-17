@@ -15,9 +15,9 @@ from game.shared.point import Point
 
 
 FRAME_RATE = 12
-MAX_X = 900
+MAX_X = 600
 MAX_Y = 600
-CELL_SIZE = 15
+CELL_SIZE = 30
 FONT_SIZE = 30
 COLS = 60
 ROWS = 40
@@ -42,7 +42,7 @@ def main():
     
     # create the robot
     x = int(MAX_X / 2)
-    y = int(MAX_Y / 2)
+    y = int(MAX_Y - CELL_SIZE)
     position = Point(x, y)
 
     robot = Actor()

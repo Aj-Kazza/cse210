@@ -59,6 +59,7 @@ class Director:
         robot.move_next(max_x, max_y)
         
         for artifact in artifacts:
+            artifact.drop()
             if robot.get_position().equals(artifact.get_position()):
                 robot.gottem((artifact.get_identity()))
         
