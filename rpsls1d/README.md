@@ -19,6 +19,7 @@ You may ask yourself, "where external play games window?", well, we also ask our
 + one of the few games ever where you have to type in your attack name! yes, no more clicking, tapping or hovering! you get to type out your attack from a series of 5 different powerful attacks!
 + an unbelievably made rpg type of game accessible through python terminal! <b>NO NEED OF 3RD PARTY PLUGINS TO PLAY!!</b>
 + why would you need audio for this when you can just make them yourself? you get hit? let out a grunt. your opponent gets hit? let out a hoorah. you get a draw? let out a gasp of surprise! the world is yours to imagine!
++ learn your opponents moves by baiting them out! by not choosing to select a form of attack from the list, your opponents will fall for your feint and reveal what it's most likely pattern of attack!! <b>A FEATURE NOT A BUG!!</b>
 
 ## How to play
 ---
