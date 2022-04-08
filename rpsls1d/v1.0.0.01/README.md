@@ -6,7 +6,7 @@ you will be asked to pick one of the 5 choices and the computer will choose one 
 
 This was coded by Quincy Brokaw, Ana Nayeli Sanchez, and Ari-john Katia
 
-## PATCH NOTES
+## Version 1.0.0.01 PATCH NOTES
 ---
 
 + Added encapsulation, inheritence, polymorphism and (persumably) maintainablitiy to the source code
