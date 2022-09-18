@@ -19,6 +19,7 @@ def main():
     area_of_play(numbers)
     has_win(numbers)
     print(phrase)
+    print()
 
 #not gonna lie, I almost gave up... and so did my bones
 
@@ -43,6 +44,7 @@ def x_select(numbers):
             print("Please enter a valid number")
             selection = False
 
+#why do I get the feeling that this specific function will come in handy during a certain week?
 def o_select(numbers):
     selection = False
     while selection != True:
