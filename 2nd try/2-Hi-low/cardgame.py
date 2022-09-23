@@ -13,9 +13,9 @@ def __main__():
     return
 
 class Cards:
-  """
-  Cards class for generating cards
-  """
+    """
+    Cards class for generating cards
+    """
     def __init__(self):
         self.value = 0
         self.number = 0
@@ -27,9 +27,9 @@ class Cards:
         
 # decided to add this just to add a little flair to the game but not too much        
     def cardname(self):
-      """
-      Displays the card's name instead of the number
-      """
+        """
+        Displays the card's name instead of the number
+        """
         if self.value == 11:
             self.number = "J"
         elif self.value == 12:
@@ -46,9 +46,9 @@ class Cards:
 
 
 class Director:
-  """
-  Director class for directing the game... and stuff, I think there might have been a template or something for the hi-low game last semester or something, because I have no idea where I got the majority of these codes
-  """
+    """
+    Director class for directing the game... and stuff, I think there might have been a template or something for the hi-low game last semester or something, because I have no idea where I got the majority of these codes
+    """
     
     def __init__(self):
         self.cards = []
@@ -59,27 +59,27 @@ class Director:
 
             
     def printcard(self):
-      """
-      prints a card
-      """
+        """
+        prints a card
+        """
         if self.playing == False:
             return
         else:
             print(f"The Card is: {Cards.cardname(self)}")
         
     def printnext(self):
-      """
-      prints the next card
-      """
+        """
+        prints the next card
+        """
         if self.playing == False:
             return
         else:
             print(f"Next card was: {Cards.cardname(self)}")
         
     def hi_low(self, last, now):
-      """
-      calculates the high or low by ... calculating the high and low
-      """
+        """
+        calculates the high or low by ... calculating the high and low
+        """
         if not self.playing:
             return
         else:
@@ -89,14 +89,14 @@ class Director:
                 return "l"
         
     def getansw(self):
-      """
-      recieves the users answer to high or low
-      """
+        """
+        recieves the users answer to high or low
+        """
         if self.playing == False:
             return
         else:
             while self.answered != True:
-                answer = input("High or Low? [h/l]")
+                answer = input("High or Low? [h/l]\n")
                 if answer.lower() == "h" or answer.lower() == "l":
                     self.answered = True
                     return answer.lower()
@@ -104,9 +104,9 @@ class Director:
                     print("Please enter valid value")
             
     def checkansw(self, x, y):
-      """
-      checks to see if users answer is correct
-      """
+        """
+        checks to see if users answer is correct
+        """
         if self.playing == False:
             return
         else:
@@ -117,15 +117,15 @@ class Director:
             print(f"Current score is: {self.score}")
     
     def play(self):
-      """
-      checks to see if player wants to play again... that is if you still have points
-      """
+        """
+        checks to see if player wants to play again... that is if you still have points
+        """
         if self.playing == False:
             return
         else:
             if self.score > 0:
                 while self.answered != True:
-                    again = input("Play again? [y/n]")
+                    again = input("Play again? [y/n]\n")
                     if again.lower() == "y":
                         self.playing = True
                         self.answered = True
@@ -139,9 +139,9 @@ class Director:
                 print("GAME OVER!! \nYou ran out of points")
     
     def updates(self):
-      """
-      checks if the program is still running
-      """
+        """
+        checks if the program is still running
+        """
         if self.playing == False:
             return
     
