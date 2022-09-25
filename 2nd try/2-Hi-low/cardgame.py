@@ -163,6 +163,7 @@ class Director:
         starts the game and the program
         """
         while not (self.playing == False or self.score <= 0):
+            print()
             self.answered = False
             current = Cards.draw(self)
             self.printcard()
