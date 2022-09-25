@@ -9,18 +9,26 @@ CSE 210
 
 import random
 
-def __main__():
-    return
+def main():
+    director = Director()
+    director.start_game()
 
 class Cards:
     """
     Cards class for generating cards
     """
     def __init__(self):
+        """
+        value for the numerical value of the card
+        number for the face number you see on the card, or what we call the cards
+        """
         self.value = 0
         self.number = 0
         
     def draw(self):
+        """
+        draws a random number from 1 to 13 to represent the cards
+        """
         value = int(random.randint(1,13))
         self.value = value
         return self.value
@@ -28,7 +36,7 @@ class Cards:
 # decided to add this just to add a little flair to the game but not too much        
     def cardname(self):
         """
-        Displays the card's name instead of the number
+        Displays the card's name instead of the number for select cards
         """
         if self.value == 11:
             self.number = "J"
@@ -51,7 +59,11 @@ class Director:
     """
     
     def __init__(self):
-        self.cards = []
+        """
+        self.playing - boolean to check if game is running
+        self.score - keeps track of the player's score
+        self.answered - for debugging purposes to make sure that answers other than required are invalid
+        """
         self.playing = True
         self.score = 300
         self.answered = False
@@ -78,7 +90,7 @@ class Director:
         
     def hi_low(self, last, now):
         """
-        calculates the high or low by ... calculating the high and low
+        calculates the high or low by ... calculating the high and low?? err, it does the greater than or less than thingey on the previous card and the current card
         """
         if not self.playing:
             return
@@ -140,14 +152,16 @@ class Director:
     
     def updates(self):
         """
-        checks if the program is still running
+        checks if the program is still running, kind of like Netflix's 'are you still watching?'
         """
         if self.playing == False:
             return
     
     
     def start_game(self):
-        
+        """
+        starts the game and the program
+        """
         while not (self.playing == False or self.score <= 0):
             self.answered = False
             current = Cards.draw(self)
@@ -162,7 +176,6 @@ class Director:
             self.play()
             self.updates()
 
-#only doing this thing because I have no idea how to make this look good
+#only doing this thing because I have no idea how to make this look good and because we talked about it in our group meeting this week so why not
 if __name__ == "__main__":
-    director = Director()
-    director.start_game()
+    main()
