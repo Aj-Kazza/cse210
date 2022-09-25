@@ -96,7 +96,7 @@ class Director:
             return
         else:
             while self.answered != True:
-                answer = input("High or Low? [h/l]\n")
+                answer = input("High or Low? [h/l]  ")
                 if answer.lower() == "h" or answer.lower() == "l":
                     self.answered = True
                     return answer.lower()
@@ -125,7 +125,7 @@ class Director:
         else:
             if self.score > 0:
                 while self.answered != True:
-                    again = input("Play again? [y/n]\n")
+                    again = input("Play again? [y/n]  ")
                     if again.lower() == "y":
                         self.playing = True
                         self.answered = True
