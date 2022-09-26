@@ -23,11 +23,8 @@ Let's bit get too complicated here, just open the file that says "cardgame" payt
 The project files and folders are organized as shown:
 ```
 root                    (the root folder)
-+-- groupgame           (the source for the game)
-  +-- director.py       (director class python)
-  +-- cards.py          (the cards class functions)
 +-- README.md           (this thing)
-+-- __main__.py         (main file to run game)
++-- cardgame.py         (whole game chucked into one file)
 ```
 
 ## Minimum System Requirement
