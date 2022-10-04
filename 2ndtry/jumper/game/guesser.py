@@ -2,7 +2,6 @@
 class Guesser:
     def __init__(self):
         self._guess = ""
-        self._score = 4
 
     def check_letter(self, word, reveal):
         guess = self._guess

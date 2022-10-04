@@ -1,42 +1,58 @@
-from parachute import Parachute
-from words import Words
-from guesser import Guesser
+from game.parachute import Parachute
+from game.words import Words
+from game.guesser import Guesser
 
 
 class Director:
     def __init__(self):
-        self._score = 4
         self._win = False
-        self.guesser = Guesser
-        self.word = Words
-        self.parachute = Parachute
+        self.guesser = Guesser()
+        self.word = Words()
+        self.parachute = Parachute()
         self._reveal = []
 
     def printchute(self):
-        self.parachute.jump(self)
+        self.parachute.jump()
 
     def getword(self):
-        self.word.banklvl(self)
-        self.word.makeword(self)
+        self.word.makeword()
 
     def makelines(self):
-        word = self.word.word
+        word = self.word._word
         reveal = list(len(word)*'_')
         self._reveal = reveal
 
     def guessletter(self):
-        self.guesser.guess_letter(self)
+        self.guesser.guess_letter()
 
-    def updates(self):
-        self._win = self.guesser.check_letter(self, self.word.word, self._reveal)
+
+    def lives(self):
+        score = self.parachute._score
+        print(f"Lives: {score}")
 
     def start_game(self):
-        while self._win == False and self._score > 0:
-            self.getword()
-            self.makelines()
-            self.printchute()
+        self.getword()
+        self.makelines()
+        print(' '.join([str(l) for l in self._reveal]))
+        print()
+        self.printchute()
+        print()
+        while self._win == False and self.parachute._score > 0:
             self.guessletter()
-            self.updates()
+            print()
 
+            if len(self.guesser._guess) == 1 and self.guesser._guess in self.word._word:
+                self._win = self.guesser.check_letter(self.word._word, self._reveal)
+            else:
+                self.parachute._score -= 1
+            print(' '.join([str(l) for l in self._reveal]))
+            print()
+            self.printchute()
+            print()
+
+        if self._win:
+            print("CONGRATULATION!")
+        else:
+            print(f"Mission Failure, the word was: {self.word._word}")
 
         
