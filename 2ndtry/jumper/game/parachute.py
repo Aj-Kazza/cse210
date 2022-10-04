@@ -1,9 +1,9 @@
 class Parachute:
     def __init__(self):
-        self.score = 4
+        self._score = 4
 
-    def disp(self):
-        if self.score == 4:
+    def jump(self):
+        if self._score == 4:
             print(" ___ ")
             print("/___\\")
             print("\\   /")
@@ -13,7 +13,7 @@ class Parachute:
             print(" / \\")
             print("")
             print("^^^^^^^")
-        elif self.score == 3:
+        elif self._score == 3:
             print("/___\\")
             print("\\   /")
             print(" \\ /")
@@ -22,7 +22,7 @@ class Parachute:
             print(" / \\")
             print("")
             print("^^^^^^^")
-        elif self.score == 2:
+        elif self._score == 2:
             print("\\   /")
             print(" \\ /")
             print("  0")
@@ -30,14 +30,14 @@ class Parachute:
             print(" / \\")
             print("")
             print("^^^^^^^")
-        elif self.score == 1:
+        elif self._score == 1:
             print(" \\ /")
             print("  0")
             print(" /|\\")
             print(" / \\")
             print("")
             print("^^^^^^^")
-        elif self.score == 0:
+        elif self._score == 0:
             print("  x")
             print(" /|\\")
             print(" / \\")
@@ -45,5 +45,7 @@ class Parachute:
             print("^^^^^^^")
 
     def score_number(self, number):
-        self.score = number
+        self._score = number
 
+    def get_score(self):
+        return self._score
